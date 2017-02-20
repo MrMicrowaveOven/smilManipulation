@@ -13,9 +13,27 @@
   border-style: solid;
 }
 
+
 .controlPanel {
   margin: 5px;
   padding: 20px;
   border: black;
   border-style: solid;
+  min-height: 200px;
+}
+
+.addStream {
+  float: left;
+  display: inline-block;
+  width: 30%;
+}
+.addPlaylist {
+  float: left;
+  display: inline-block;
+  width: 30%;
+}
+.addVideo {
+  float: left;
+  display: inline-block;
+  width: 30%;
 }
