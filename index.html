@@ -13,14 +13,27 @@
           &emsp;&lt;/head&gt;<br>
           &emsp;&lt;body&gt;<br><br>
             <div class="streams" id="streams">
-
             </div>
             <br>
             <div class="playlists" id="playlists">
-
             </div>
           &emsp;&lt;/body&gt;
           <br>&lt;/smil&gt;
+      </div>
+    </label>
+    <label>User View
+      <div class="userView">
+        <label>Streams:
+          <div class="streamsView" id="streamsView">
+
+          </div>
+        </label><br>
+        <label>Playlists:
+          <div class="playlistsView" id="playlistsView">
+
+          </div>
+        </label>
+
       </div>
     </label>
     <label>Control Panel
@@ -58,6 +71,7 @@
       window.streams = [];
       window.playlists = [];
       window.videos = [];
+      
       function AddStream() {
         var streamName = document.getElementById("streamName").value;
         var streamXML = '<stream name="' + streamName + '"></stream>';
@@ -71,6 +85,10 @@
         option.setAttribute("value", streamName);
         option.innerHTML = streamName;
         document.getElementById("playlistStream").appendChild(option);
+
+        var streamView = document.createTextNode(streamName);
+        document.getElementById("streamsView").appendChild(streamView);
+        document.getElementById("streamsView").appendChild(document.createElement("br"));
       }
 
       function AddPlaylist() {
@@ -79,9 +97,9 @@
         var repeat = document.getElementById("repeat").checked;
         var timeToPlay = document.getElementById("dateTime").value;
         var playlistXML = '<playlist name="' + playlistName
-                    + '" playOnStream="' + playlistStream
-                    + '" repeat="' + repeat
-                    + '" scheduled="' + dateTime + '">'
+                        + '" playOnStream="' + playlistStream
+                        + '" repeat="' + repeat
+                        + '" scheduled="' + dateTime + '">'
         var playlist = document.createTextNode(playlistXML);
 
         var playlistDiv = document.createElement("div");
@@ -107,6 +125,10 @@
         document.getElementById("vidPlaylist").appendChild(option);
 
         window.playlists.push(playlistName);
+
+        var playlistView = document.createTextNode(playlistName);
+        document.getElementById("playlistsView").appendChild(playlistView);
+        document.getElementById("playlistsView").appendChild(document.createElement("br"));
       }
 
       function AddVideo() {

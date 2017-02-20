@@ -6,12 +6,33 @@
   margin-left: 30px;
 }
 
+/*.streamsView {
+  height: 50%;
+}
+
+.playlistsView {
+  height: 50%;
+}*/
+
 .XMLSpace {
   margin: 5px;
   padding: 20px;
   border: black;
   border-style: solid;
   min-height: 400px;
+  width: 800px;
+}
+
+.userView {
+  margin: 5px;
+  padding: 20px;
+  border: black;
+  border-style: solid;
+  min-height: 400px;
+  width: 450px;
+  position: absolute;
+  right: 0px;
+  top: 20px;
 }
 
 
