@@ -139,10 +139,12 @@
         //Add playlist to global array
         window.playlists.push(playlistName);
 
-        //Add playlist to userView
-        var playlistView = document.createTextNode(playlistName);
+        //Add playlist to userView as a div
+        var playlistView = document.createElement("div");
+        playlistView.setAttribute("id", playlistName + "View");
+        playlistView.innerHTML = playlistName;
+        playlistView.appendChild(document.createElement("br"));
         document.getElementById("playlistsView").appendChild(playlistView);
-        document.getElementById("playlistsView").appendChild(document.createElement("br"));
       }
 
       function AddVideo() {
@@ -164,6 +166,12 @@
         var videoClose = document.createTextNode("</video>");
         playlistDiv.appendChild(videoClose);
         playlistDiv.appendChild(document.createElement("br"));
+
+        //Add video to corresponding playlist in userView
+        var playlistView = document.getElementById(vidPlaylist + "View");
+        var videoView = document.createTextNode(source);
+        playlistView.appendChild(videoView);
+        playlistView.appendChild(document.createElement("br"));
       }
     </script>
   </body>
