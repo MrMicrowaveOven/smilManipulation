@@ -6,13 +6,17 @@
   margin-left: 30px;
 }
 
-/*.streamsView {
-  height: 50%;
+.streamView {
+  margin-left: 30px;
 }
 
-.playlistsView {
-  height: 50%;
-}*/
+.playlistView {
+  margin-left: 30px;
+}
+
+.videoView {
+  margin-left: 50px;
+}
 
 .XMLSpace {
   margin: 5px;

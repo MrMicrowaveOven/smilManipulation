@@ -91,10 +91,11 @@
         option.innerHTML = streamName;
         document.getElementById("playlistStream").appendChild(option);
 
-        //Add stream to userView
-        var streamView = document.createTextNode(streamName);
+        //Add stream to userView as a div
+        var streamView = document.createElement("div");
+        streamView.setAttribute("class", "streamView")
+        streamView.innerHTML = streamName;
         document.getElementById("streamsView").appendChild(streamView);
-        document.getElementById("streamsView").appendChild(document.createElement("br"));
       }
 
       function AddPlaylist() {
@@ -142,6 +143,7 @@
         //Add playlist to userView as a div
         var playlistView = document.createElement("div");
         playlistView.setAttribute("id", playlistName + "View");
+        playlistView.setAttribute("class", "playlistView");
         playlistView.innerHTML = playlistName;
         playlistView.appendChild(document.createElement("br"));
         document.getElementById("playlistsView").appendChild(playlistView);
@@ -169,9 +171,10 @@
 
         //Add video to corresponding playlist in userView
         var playlistView = document.getElementById(vidPlaylist + "View");
-        var videoView = document.createTextNode(source);
+        var videoView = document.createElement("div");
+        videoView.innerHTML = source;
+        videoView.setAttribute("class", "videoView");
         playlistView.appendChild(videoView);
-        playlistView.appendChild(document.createElement("br"));
       }
     </script>
   </body>
