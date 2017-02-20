@@ -5,3 +5,17 @@
 .videos {
   margin-left: 30px;
 }
+
+.XMLSpace {
+  margin: 5px;
+  padding: 20px;
+  border: black;
+  border-style: solid;
+}
+
+.controlPanel {
+  margin: 5px;
+  padding: 20px;
+  border: black;
+  border-style: solid;
+}

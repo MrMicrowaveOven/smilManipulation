@@ -6,38 +6,41 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <div class="XMLSpace">
-      &lt;smil&gt;<br>
-        &emsp;&lt;head&gt;<br>
-        &emsp;&lt;/head&gt;<br>
-        &emsp;&lt;body&gt;<br><br>
-          <div class="streams" id="streams">
+    <label>XML View
+      <div class="XMLSpace">
+        &lt;smil&gt;<br>
+          &emsp;&lt;head&gt;<br>
+          &emsp;&lt;/head&gt;<br>
+          &emsp;&lt;body&gt;<br><br>
+            <div class="streams" id="streams">
 
-          </div>
-          <br>
-          <div class="playlists" id="playlists">
+            </div>
+            <br>
+            <div class="playlists" id="playlists">
 
-          </div>
-        &emsp;&lt;/body&gt;
-    <br>&lt;/smil&gt;
-    </div>
+            </div>
+          &emsp;&lt;/body&gt;
+          <br>&lt;/smil&gt;
+      </div>
+    </label>
+    <label>Control Panel
+      <div class="controlPanel">
+          <label>Stream Name: <input type="text" id="streamName" name="streamName" value=""></label><br>
+          <button type="Add" name="button" onClick="AddStream()">Add Stream</button><br>
 
-    <div class="controlPanel">
-      <label>Stream Name: <input type="text" id="streamName" name="streamName" value=""></label><br>
-      <button type="Add" name="button" onClick="AddStream()">Add Stream</button><br>
+          <label>Playlist Name: <input type="text" id="playlistName" name="playlistName" value=""></label><br>
+          <label>Stream to play on: <input type="text" id="playlistStream" name="playlistStream" value=""></label><br>
+          <input type="checkbox" name="repeat" id="repeat" value="">Repeat?<br>
+          <label>Time to play stream: <input type="datetime-local" name="dateTime" id="dateTime" value=""></label><br>
+          <button type="Add" name="button" onClick="AddPlaylist()">Add Playlist</button><br>
 
-      <label>Playlist Name: <input type="text" id="playlistName" name="playlistName" value=""></label><br>
-      <label>Stream to play on: <input type="text" id="playlistStream" name="playlistStream" value=""></label><br>
-      <input type="checkbox" name="repeat" id="repeat" value="">Repeat?<br>
-      <label>Time to play stream: <input type="datetime-local" name="dateTime" id="dateTime" value=""></label><br>
-      <button type="Add" name="button" onClick="AddPlaylist()">Add Playlist</button><br>
-
-      <label>Playlist: <input type="text" name="vidPlaylist" id="vidPlaylist" value=""></label><br>
-      <label>Source: <input type="text" name="source" id="source" value=""></label><br>
-      <label>Start Time: <input type="text" name="start" id="start" value=""></label><br>
-      <label>Length to Play: <input type="text" name="length" id="length" value=""></label><br>
-      <button type="Add" name="button" onClick="AddVideo()">Add Video</button>
-    </div>
+          <label>Playlist: <input type="text" name="vidPlaylist" id="vidPlaylist" value=""></label><br>
+          <label>Source: <input type="text" name="source" id="source" value=""></label><br>
+          <label>Start Time: <input type="text" name="start" id="start" value=""></label><br>
+          <label>Length to Play: <input type="text" name="length" id="length" value=""></label><br>
+          <button type="Add" name="button" onClick="AddVideo()">Add Video</button>
+        </div>
+      </label>
 
     <script type="text/javascript">
       function AddStream() {
@@ -86,7 +89,7 @@
         var playlistDiv = document.getElementById(vidPlaylist + "Vids");
         var vidXML = '<video src="' + source
                     + '" start="' + start
-                    + '" length="' + length + '"/>'
+                    + '" length="' + length + '">'
         playlist = document.createTextNode(vidXML);
         playlistDiv.appendChild(playlist);
 
