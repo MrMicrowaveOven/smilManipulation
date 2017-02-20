@@ -10,14 +10,15 @@
       &lt;smil&gt;<br>
         &emsp;&lt;head&gt;<br>
         &emsp;&lt;/head&gt;<br>
-        &emsp;&lt;body&gt;<br>
+        &emsp;&lt;body&gt;<br><br>
           <div class="streams" id="streams">
 
           </div>
+          <br>
           <div class="playlists" id="playlists">
 
           </div>
-        <br>&emsp;&lt;/body&gt;
+        &emsp;&lt;/body&gt;
     <br>&lt;/smil&gt;
     </div>
 
@@ -72,6 +73,7 @@
 
         var playlistClose = document.createTextNode("</playlist>");
         playlistDiv.appendChild(playlistClose);
+        playlistDiv.appendChild(document.createElement("br"));
         playlistDiv.appendChild(document.createElement("br"));
       }
 
