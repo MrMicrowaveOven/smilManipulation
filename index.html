@@ -44,7 +44,7 @@
 
         <div class="addVideo">
           <label><strong>Add Video</strong><br>
-            <label>Playlist: <input type="text" name="vidPlaylist" id="vidPlaylist" value=""></label><br>
+            <label>Playlist: <select name="vidPlaylist" id="vidPlaylist" value=""></select></label><br>
             <label>Source: <input type="text" name="source" id="source" value=""></label><br>
             <label>Start Time: <input type="text" name="start" id="start" value=""></label><br>
             <label>Length to Play: <input type="text" name="length" id="length" value=""></label><br>
@@ -100,6 +100,11 @@
         playlistDiv.appendChild(playlistClose);
         playlistDiv.appendChild(document.createElement("br"));
         playlistDiv.appendChild(document.createElement("br"));
+
+        var option = document.createElement("option");
+        option.setAttribute("value", playlistName);
+        option.innerHTML = playlistName;
+        document.getElementById("vidPlaylist").appendChild(option);
 
         window.playlists.push(playlistName);
       }
