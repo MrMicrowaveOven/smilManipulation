@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Sample XML</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="XMLSpace">
@@ -64,10 +65,10 @@
         playlistDiv.appendChild(playlist);
         playlistDiv.appendChild(document.createElement("br"));
 
-        var vidsDiv = document.createElement("div")
-        vidsDiv.setAttribute("id", playlistName + "Vids")
+        var vidsDiv = document.createElement("div");
+        vidsDiv.setAttribute("id", playlistName + "Vids");
+        vidsDiv.setAttribute("class", "videos");
         playlistDiv.appendChild(vidsDiv);
-
 
         var playlistClose = document.createTextNode("</playlist>");
         playlistDiv.appendChild(playlistClose);
