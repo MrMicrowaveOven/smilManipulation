@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="XMLViewLabel">
     <label>XML View
+    </label>
       <div class="XMLSpace">
         &lt;smil&gt;<br>
           &emsp;&lt;head&gt;<br>
@@ -20,23 +22,25 @@
           &emsp;&lt;/body&gt;
           <br>&lt;/smil&gt;
       </div>
-    </label>
-    <label>User View
-      <div class="userView">
-        <label>Streams:
-          <div class="streamsView" id="streamsView">
+    </div>
+    <div class="userViewLabel">
+      <label>User View</label>
+        <div class="userView">
+          <label>Streams:
+            <div class="streamsView" id="streamsView">
 
-          </div>
-        </label><br>
-        <label>Playlists:
-          <div class="playlistsView" id="playlistsView">
+            </div>
+          </label><br>
+          <label>Playlists:
+            <div class="playlistsView" id="playlistsView">
 
-          </div>
-        </label>
+            </div>
+          </label>
 
-      </div>
-    </label>
-    <label>Control Panel
+        </div>
+    </div>
+    <div class="controlPanelLabel">
+    <label>Control Panel</label>
       <div class="controlPanel">
         <div class="addStream">
           <label><strong>Add Stream</strong><br>
@@ -65,7 +69,7 @@
           </label>
         </div>
       </div>
-    </label>
+  </div>
 
     <script type="text/javascript">
       window.streams = [];

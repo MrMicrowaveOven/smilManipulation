@@ -18,13 +18,16 @@
   margin-left: 50px;
 }
 
+.controlPanel {
+  width: 1353px;
+}
+
 .XMLSpace {
   margin: 5px;
   padding: 20px;
   border: black;
   border-style: solid;
   min-height: 400px;
-  width: 800px;
 }
 
 .userView {
@@ -33,12 +36,17 @@
   border: black;
   border-style: solid;
   min-height: 400px;
-  width: 450px;
+}
+.userViewLabel {
+  width: 550px;
+  top: 7px;
+  left: 865px;
   position: absolute;
-  right: 0px;
-  top: 20px;
 }
 
+.XMLViewLabel {
+  width: 850px;
+}
 
 .controlPanel {
   margin: 5px;
