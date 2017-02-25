@@ -23,7 +23,7 @@ function AddStream() {
 
   //Add stream to userView as a div
   var streamView = document.createElement("div");
-  streamView.setAttribute("class", "streamView")
+  streamView.setAttribute("class", "streamView");
   streamView.innerHTML = streamName;
   document.getElementById("streamsView").appendChild(streamView);
 }
@@ -39,7 +39,7 @@ function AddPlaylist() {
   var playlistXML = '<playlist name="' + playlistName
                   + '" playOnStream="' + playlistStream
                   + '" repeat="' + repeat
-                  + '" scheduled="' + timeToPlay + '">'
+                  + '" scheduled="' + timeToPlay + '">';
   var playlist = document.createTextNode(playlistXML);
 
   //Put XML object into a div with id equal to playlistName
@@ -90,8 +90,8 @@ function AddVideo() {
   //Make XML node and add to playlistDiv
   var vidXML = '<video src="' + source
               + '" start="' + start
-              + '" length="' + length + '">'
-  playlist = document.createTextNode(vidXML);
+              + '" length="' + length + '">';
+  var playlist = document.createTextNode(vidXML);
   playlistDiv.appendChild(playlist);
 
   //Add video close to HTML node
